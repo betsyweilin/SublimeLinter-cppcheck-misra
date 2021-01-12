@@ -119,5 +119,6 @@ fi
 
 for f in "$@" ; do
     cppcheck ${CPPCHECK_OPTS} --dump "$f"
-    python3 "${MISRA_PY}" ${misra_py_opts} "$f.dump"
+    python3 -u "${MISRA_PY}" ${misra_py_opts} "$f.dump"
+	echo "xxxxxxxxxxxxxxxxxx"
 done
